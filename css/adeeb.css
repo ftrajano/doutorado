@@ -1,0 +1,27 @@
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	padding: 20px;
+}
+h1, h2, h3 {
+	color: #0056b3;
+}
+a {
+	color: #0056b3;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.reference {
+	font-size: 0.9em;
+	color: #666;
+}

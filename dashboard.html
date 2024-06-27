@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Summary Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <h1>Research Summary</h1>
+    <!-- Primeira Tabela -->
+    <table id="table1">
+        <thead>
+            <tr>
+                <th rowspan="2">Summary of the Selected Articles</th>
+                <th rowspan="2">Summary of the Collected Articles</th>
+                <th rowspan="2">Summary of the Rejected Articles</th>
+                <th colspan="6">Records excluded by reasons</th>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <th>Document type</th>
+                <th>Source type</th>
+                <th>Language</th>
+                <th>Other</th>
+                <th>Off topic</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td contenteditable="true">Data Base / Journal</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="button-container">
+        <button onclick="addRow('table1')">Add Row to Table 1</button>
+        <button onclick="removeRow('table1')">Remove Row from Table 1</button>
+    </div>
+
+    <div id="tables-container">
+        <!-- Segunda Tabela -->
+        <div class="keyword-table-container">
+            <table class="keyword-table">
+                <thead>
+                    <tr>
+                        <th rowspan="3">Data base / Journal</th>
+                        <th contenteditable="true" colspan="8">Keywords</th>  
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Number of Selected Articles</th>
+                        <th rowspan="2">Number of Collected Articles</th>
+                        <th colspan="6">Number of included articles after criteria insertion</th>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <th>Document type</th>
+                        <th>Source type</th>
+                        <th>Language</th>
+                        <th>Other</th>
+                        <th>On topic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true">Data Base / Journal</td>
+                        <td contenteditable="true">0</td>
+                        <td contenteditable="true">0</td>
+                        <td contenteditable="true">0</td>
+                        <td contenteditable="true">0</td>
+                        <td contenteditable="true">0</td>
+                        <td contenteditable="true">0</td>
+                        <td contenteditable="true">0</td>
+                        <td contenteditable="true">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="button-container">
+                <button onclick="addRowToTable(this)">Add Row</button>
+                <button onclick="removeRowFromTable(this)">Remove Row</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button onclick="addKeywordTable()">Add Keyword Table</button>
+		<button onclick="saveData()">Save Data</button>
+		<button onclick="exportData()">Export Data</button>
+	</div>
+	
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
