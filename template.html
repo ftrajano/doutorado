@@ -53,9 +53,11 @@
 				
 				By utilizing 3D CNNs, we can achieve a detailed understanding of particle size distribution and internal microfracturing patterns. This innovative approach not only aims to improve the analysis process but also to enhance the overall efficiency and cost-effectiveness of mining operations. The integration of 3D CNNs allows for precise modeling and prediction of rock fragmentation patterns, leading to more targeted and efficient blasting strategies. This, in turn, enhances the productivity and cost-effectiveness of subsequent mineral processing operations.
 				
-				In summary, this research underscores the significant impact of rock fragmentation on mining efficiency and introduces a cutting-edge approach to optimize this process. By incorporating 3D CNNs into the analysis of rock fragmentation, we aim to advance both the technical capabilities and economic sustainability of mining practices, paving the way for a smarter and more efficient future in the industry.
 				
-				This study represents a substantial contribution to the field of mining engineering, offering practical solutions to optimize the efficiency and sustainability of mining operations through the application of advanced machine learning techniques.</p>
+			</p>
+        
+            <h3>Keywords</h3>
+            <p>Rock Fragmentation, 3D Convolutional Neural Networks, Real-Time Analysis, Mining Operations, Machine Learning</p>
         </section>
 
         <section>
@@ -68,21 +70,85 @@
 
 				Ao utilizar 3D CNNs, podemos obter uma compreensão detalhada da distribuição do tamanho das partículas e dos padrões de microfraturas internas. Esta abordagem inovadora não apenas visa melhorar o processo de análise, mas também aumentar a eficiência e a rentabilidade geral das operações de mineração. A integração de 3D CNNs permite uma modelagem e previsão precisas dos padrões de fragmentação de rochas, levando a estratégias de desmonte mais direcionadas e eficientes. Isso, por sua vez, melhora a produtividade e a relação custo-benefício das operações subsequentes de processamento mineral.
 
-				Em resumo, esta pesquisa destaca o impacto significativo da fragmentação de rochas na eficiência da mineração e introduz uma abordagem de ponta para otimizar esse processo. Ao incorporar 3D CNNs na análise da fragmentação de rochas, visamos avançar tanto as capacidades técnicas quanto a sustentabilidade econômica das práticas de mineração, abrindo caminho para um futuro mais inteligente e eficiente na indústria.
+				
 
-				Este estudo representa uma contribuição substancial para o campo da engenharia de minas, oferecendo soluções práticas para otimizar a eficiência e a sustentabilidade das operações de mineração através da aplicação de técnicas avançadas de aprendizado de máquina.
+			
 			</p>
-        </section>
 
-        <section>
-            <h2>Keywords</h2>
-            <p>Rock Fragmentation, 3D Convolutional Neural Networks, Real-Time Analysis, Mining Operations, Machine Learning</p>
-        </section>
-
-        <section>
-            <h2>Palavras chave</h2>
+            <h3>Palavras chave</h3>
             <p>Fragmentação de Rochas, Redes Neurais Convolucionais 3D, Análise em Tempo Real, Operações de Mineração, Aprendizado de Máquina</p>
         </section>
+
+		<section>
+			<h2>1. Introdução</h2>
+
+			<h3>1.1 Declaração do Problema e Objetivos da pesquisa </h3>
+
+			<p>
+				Atualmete as formas de se medir fragmentação são feitas usando-se imagens e modelos 
+				de aprendizado de maquina para detectar padrões nessas imagens
+			</p>
+			<p>
+				A avaliação da fragmentação por detonação, seguida pelos processos de britagem e moagem, desempenha um papel crucial na indústria de mineração. O controle e a otimização das operações exigem uma descrição detalhada das distribuições de tamanho em várias etapas, uma vez que as características da fragmentação influenciam diretamente a produtividade do carregamento, a capacidade de processamento dos britadores e o consumo de energia. Esses fatores, por sua vez, afetam a eficiência da planta, o rendimento e a recuperação dos materiais, bem como o preço final dos produtos, especialmente no caso de minerais industriais e agregados <a href="artigos/Size distribution functions for rock fragments.pdf">(Sanchidrián et al., 2014) </a>.
+			</p>
+
+			<p>Até o ínicio dos anos 2000, a análise de fragmentação era feita exclusivamente usando análise de imagens através de filtros e outras ferramentas d</p>
+
+			<p> A fragmentação de rochas é um dos componentes mais frequentemente otimizados nos resultados de desmontes devido à sua influência significativa na eficiência das operações subsequentes de mineração. Dois aspectos cruciais da fragmentação de rochas que impactam os processos de mineração pós-desmonte são o tamanho das partículas e o grau de microfraturas internas induzidas pela detonação. Essas variáveis afetam diretamente a produtividade dos equipamentos de cominuição, o consumo de energia e a recuperação mineral <a href="artigos/A review of the influence of blast fragmentation on downstream processing of metal ores.pdf">(Kinyua et al., 2022)</a>
+			</p>
+			<p>
+				Estudos detalhados sobre a distribuição do tamanho das partículas e a presença de microfraturas são essenciais para desenvolver estratégias de desmonte que maximizem a eficiência do processamento mineral subsequente. A aplicação de tecnologias avançadas, como Redes Neurais Convolucionais 3D (3D CNNs), pode proporcionar uma análise mais precisa e uma modelagem robusta desses aspectos, permitindo uma otimização mais eficiente das operações de mineração.
+			</p>
+
+
+
+			<p>Ao longo dos anos, várias técnicas foram desenvolvidas e empregadas para a análise de fragmentação em minas a céu aberto, cada uma com suas próprias vantagens e desvantagens. Entre as técnicas mais comuns estão:</p>
+			<ol>
+				<li>
+					<strong>Peneiramento:</strong>
+					<p>O processo envolve a passagem de fragmentos de rocha por peneiras com diferentes tamanhos de malha para classificá-los de acordo com o tamanho. Este método é direto e preciso, mas é demorado e custoso.</p>
+				</li>
+				<li>
+					<strong>Contagem de Blocos Superdimensionados:</strong>
+					<p>Os blocos superdimensionados, que estão além da capacidade das pás de manuseio, são contados manualmente. Esta técnica é útil para detonações em pequena escala, porém é um método manual.</p>
+				</li>
+				<li>
+					<strong>Método da Taxa de Carregamento da Pá:</strong>
+					<p>Este método é utilizado para comparações precisas de fragmentações de detonações, operando sob a premissa de que uma taxa de carregamento mais rápida indica uma fragmentação superior. No entanto, não é eficaz para a análise de fragmentos subdimensionados.</p>
+				</li>
+				<li>
+					<strong>Análise Visual:</strong>
+					<p>Trata-se de uma avaliação subjetiva em que o material pós-detonado é inspecionado visualmente imediatamente após a detonação. Esta técnica é considerada pouco confiável.</p>
+				</li>
+				<li>
+					<strong>Método de Fotogrametria:</strong>
+					<p>Neste método, o cálculo do volume de fragmentação é realizado através de medições tridimensionais com o auxílio de fotografias. É uma técnica precisa e confiável.</p>
+				</li>
+				<li>
+					<strong>Técnica de Análise de Imagens:</strong>
+					<p>Esta análise de fragmentação por detonação fornece a distribuição de tamanho sem causar interrupções na produção, reduzindo significativamente o impacto dos erros de amostragem. Oferece maior precisão e é uma solução eficiente em termos de custo.</p>
+				</li>
+				<li>
+					<strong>Modelo Empírico Kuz-Ram:</strong>
+					<p>Este é o modelo empírico mais utilizado para determinar o tamanho médio da fragmentação de uma detonação. A fórmula do Kuz-Ram considera diversos fatores como volume de rocha detonada, massa de carga explosiva por furo, e força relativa do explosivo. Apesar de sua ampla utilização, a validade da fórmula pode ser questionável para diferentes locais.</p>
+				</li>
+			</ol>
+			<p>Essas técnicas desempenham um papel crucial na otimização das operações de mineração, pois a fragmentação adequada das rochas impacta diretamente a eficiência das operações subsequentes, como carregamento, transporte, britagem e moagem. A escolha da técnica adequada pode variar conforme as especificidades do local de mineração e os objetivos operacionais.</p>
+
+			<p>Nos últimos anos com o avanço do poder computacional e da interligência artificial o campo da análise de fragmentação foi fortemente impactado. </p>
+
+			
+		</section>
+
+		<section>
+			<h2>Estado da Arte</h2>
+		</section>
+
+		<section>
+			<h2>Objetivos</h2>
+		</section>
+
+
 
         <section>
             <h2>1. Formulação do Problema de Investigação (máximo 2000 palavras)</h2>
@@ -90,6 +156,7 @@
             <p>A fragmentação de rochas é um processo essencial em operações de mineração, com impacto direto na eficiência e custo das operações subsequentes, como trituração e moagem. A análise precisa da fragmentação é crucial para otimizar o uso de energia e maximizar a produtividade. No entanto, os métodos tradicionais de análise de fragmentação muitas vezes são lentos e imprecisos, não fornecendo dados em tempo real. Com o avanço das tecnologias de aprendizado de máquina, especialmente das Redes Neurais Convolucionais 3D (3D CNNs), surge a oportunidade de melhorar significativamente a análise de fragmentação de rochas em tempo real. Este projeto visa desenvolver e implementar uma metodologia baseada em 3D CNNs para analisar a fragmentação de rochas diretamente nas pás dos caminhões ou no material despejado nos moinhos, proporcionando dados precisos e em tempo real para otimizar as operações de mineração.</p>
 
             <h3>1.2. Estado da arte (máximo 1000 palavras)</h3>
+			<p>O problema da análise da fragmentação, ou seja, o grupo de métodos e técnicas usado para medir, estimar e caracterizar fragmentos de rochas resultantes do desmonte é um dos  </p>
             <p>A análise da fragmentação de rochas tem sido objeto de estudo por décadas, com métodos tradicionais variando desde a inspeção visual até a análise de imagens bidimensionais. No entanto, esses métodos possuem limitações significativas em termos de precisão e tempo de resposta. Com o advento das técnicas de aprendizado de máquina, especialmente as Redes Neurais Convolucionais (CNNs), a análise de imagens tem se tornado mais precisa e eficiente. Estudos recentes demonstram o potencial das CNNs na análise de fragmentação de rochas, mas a aplicação de CNNs 3D para análise em tempo real ainda é uma área em desenvolvimento. Esta pesquisa pretende preencher essa lacuna, revisando a literatura existente sobre técnicas de fragmentação, metodologias de aprendizado de máquina aplicadas à análise de vídeos e os avanços recentes em CNNs 3D.</p>
 
             <h3>1.3 Objetivos e hipóteses (máximo de 500 palavras)</h3>
@@ -155,6 +222,13 @@
 			<ol>
 				<li><a href="artigos/Review of deep learning approaches in solving rock fragmentation problems - cópia.pdf
 					">Ronkin, Mikhail & Akimova, Elena & Misilov, Vladimir. (2023). Review of deep learning approaches in solving rock fragmentation problems. AIMS Mathematics. 8. 23900-23940. 10.3934/math.20231219. </a></li>
+
+				<li><a href="artigos/Review of deep learning approaches in solving rock fragmentation problems.pdf">José A. Sanchidrián, Finn Ouchterlony, Pablo Segarra, Peter Moser,
+					Size distribution functions for rock fragments,
+					International Journal of Rock Mechanics and Mining Sciences,
+					Volume 71,
+					2014,
+					Pages 381-394</a></li>
 			</ol>
         </section>
 
