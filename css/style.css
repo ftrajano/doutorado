@@ -1,4 +1,8 @@
 /* Estilos de tabelas */
+/* 
+h1, h2, h3 {
+	color: #2F4F4F;
+} */
 table {
     width: 100%;
     border-collapse: collapse;
