@@ -45,7 +45,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 21cm;
     margin: auto;
     overflow: hidden;
     padding: 20px;
@@ -67,4 +67,8 @@ a:hover {
 .reference {
     font-size: 0.9em;
     color: #666;
+}
+
+.page{
+	height: 29.7cm;
 }
