@@ -1,0 +1,87 @@
+Year,Practical Problem,CV Task,Approach,Specifics,Primary CV Model
+2023,Conveyor,Semantic,DL,SLIC + U-Net,U-Net
+2022,Conveyor,Object,DL,SSD, YOLOv3, YOLOv4, YOLOv5, DCN-YOLOv3,YOLO
+2022,Conveyor,Object,DL,Yolo3, SPPNet, Yolo1,2,YOLO
+2022,Conveyor,Classification,DL,AlexNet, VGG16, ResNet50, InceptionV3, MobileNet, SENet,MobileNet
+2021,Conveyor,Semantic,DL,DexiNed Edge Detection + Morphologic + Watershed,Other
+2021,Conveyor,Semantic,DL,U-Net,U-Net
+2020,Conveyor,Semantic,DL,U-Net,U-Net
+2020,Conveyor,Semantic,DL,U-Net, Res-U-Net + Watershed,U-Net
+2020,Conveyor,Semantic,DL,U-Net, RDUNET, DUNET,U-Net
+2020,Conveyor,Semantic,DL,U-Net + Watershed,U-Net
+2020,Conveyor,Semantic,DL,CNN + Watershed,Watershed
+2019,Conveyor,Semantic,Classical,Otsu + Histogram accumulation moment,Other
+2019,Conveyor,Other,Classical,Super Voxel 3D,Other
+2023,Open Pit,Instance,DL,Mask R-CNN,Mask R-CNN
+2022,Open Pit,Instance,Classical,Model based,Watershed
+2022,Open Pit,Instance,DL,ResNeXt101 + SE,ResNeXt
+2022,Open Pit,Instance,DL,ResNet-50 + Mask R-CNN,Mask R-CNN
+2022,Open Pit,Object,DL,YOLO,YOLO
+2021,Open Pit,Semantic,DL,Dual U-Net, boundary and regions,U-Net
+2021,Open Pit,Semantic,Classical,Wavelet Superpixel segmentation,Other
+2021,Open Pit,Instance,DL,Mask R-CNN,Mask R-CNN
+2021,Open Pit,Instance,Classical,Super-Voxel Segmentation,Other
+2021,Open Pit,Instance,DL,Mask R-CNN,Mask R-CNN
+2021,Open Pit,Instance,Classical,Watershed,Watershed
+2021,Open Pit,Instance,DL,Mask R-CNN,Mask R-CNN
+2021,Open Pit,Classification,Classical,ResNeXt-50,ResNet
+2021,Open Pit,Classification,Classical,SM, GMB, SVM + Firefly evolutionary algorithm,Other
+2021,Open Pit,Classification,Classical,ANN, Monte Carlo dropout,Other
+2021,Open Pit,Other,Classical,Power Sieve3 software,Other
+2020,Open Pit,Classification,DL,VGG-16,VGG
+2019,Open Pit,Instance,Classical,Split-Desktop Software,Other
+2019,Open Pit,Other,Classical,Custom,Other
+2018,Open Pit,Classification,Classical,SVM,Other
+2013,Open Pit,Classification,Classical,ANN,Other
+2009,Open Pit,Instance,Classical,Watershed,Watershed
+2005,Open Pit,Instance,Classical,Watershed,Watershed
+2003,Open Pit,Other,Classical,WipFrag software,Other
+2021,Tunnel,Semantic,DL,FCN8s, GCN, DFN, DeepLabV3, PSPNet,DFN
+2021,Tunnel,Semantic,DL,Dual U-Net, boundary and regions,U-Net
+2021,Tunnel,Instance,DL,SSD + U-Net + post-processing,U-Net
+2021,Tunnel,Classification,DL,AlexNet,Other
+2021,Tunnel,Classification,DL,ResNet + GoogLeNet,ResNet
+2013,Tunnel,Instance,Classical,Watershed,Watershed
+2011,Tunnel,Instance,Classical,Watershed,Watershed
+2023,Other,Semantic,DL,MSBA-Unet + CDD post-processing,U-Net
+2023,Other,Object,DL,YOLO,YOLO
+2023,Other,Object,DL,Watershed, FASTER-R-CNN, YOLO3,YOLO
+2022,Other,Semantic,DL,Swin-Unet,U-Net
+2022,Other,Semantic,DL,DeepLab3+,DeepLab
+2022,Other,Object,DL,DCN-YOLOv3,YOLO
+2022,Other,Classification,Classical,ANN + SVR,Other
+2021,Other,Semantic,DL,GAN + U-Net,U-Net
+2021,Other,Semantic,DL,FraSegNet: VGG19 + ASPP,Other
+2021,Other,Instance,DL,ResNet50,Mask R-CNN
+2021,Other,Instance,DL,Mask R-CNN,Mask R-CNN
+2021,Other,Classification,DL,AlexNet, VGG,VGG
+2021,Other,Classical,Custom,Other
+2020,Other,Semantic,DL,Lightweight U-Net + Morphologic + Watershed,U-Net
+2020,Other,Instance,DL,Mask R-CNN + FCN,Mask R-CNN
+2020,Other,Object,DL,Faster R-CNN,Faster R-CNN
+2020,Other,Classification,Classical,Edge Detection,Other
+2020,Other,Other,DL,Custom CNN,Other
+2020,Other,Other,Classical,Custom,Other
+2019,Other,Semantic,DL,SegNet,Other
+2019,Other,Instance,Classical,SLIC Segmentation + Features + Classification,Other
+2019,Other,Instance,Classical,Wavelet + manual features + ANN,Other
+2019,Other,Instance,Classical,Morphological Reconstruction,Other
+2019,Other,Instance,Classical,Otsu + Watershed,Watershed
+2018,Other,Semantic,DL,Holistically-nested convolutional network,Other
+2018,Other,Instance,Classical,Morphologic + Watershed,Watershed
+2018,Other,Instance,Classical,Thresholding + Watershed,Watershed
+2018,Other,Other,Classical,WipFrag software,Other
+2016,Other,Classification,Classical,Morphologic + Watershed + SVM for classification,Other
+2016,Other,Other,Classical,WipFrag software,Other
+2015,Other,Classification,Classical,ANN + post-processing,Other
+2013,Other,Classification,Classical,ANN + Regression,Other
+2013,Other,Other,Classical,GoldSize software,Other
+2012,Other,Classification,Classical,SVM,Other
+2011,Other,Instance,Classical,Watershed,Watershed
+2010,Other,Instance,Classical,Watershed,Watershed
+2009,Other,Semantic,Classical,Thresholding morphologic,Other
+2009,Other,Classification,Classical,Fuzzy Logic,Other
+2008,Other,Semantic,Classical,Edge Detection,Other
+2005,Other,Other,Classical,Laser 3d + Watershed,Other
+1999,Other,Classification,Classical,Morphologic + ANN for classification,Other
+1996,Other,Other,Classical,Image Preparation,Other

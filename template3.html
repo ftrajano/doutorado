@@ -71,13 +71,16 @@
 							<h3>1.1. Qual é o problema de investigação? (máximo 500 palavras)</h3>
 
 							<!-- # Problema de Investigação: Evolução da Análise de Fragmentação de Rochas na Era do Deep Learning -->
+							<p>O setor mineiro sofreu uma rápida transformação nos últimos anos, com a digitalização das suas operações. Esta transformação tem sido frequentemente referida como a quarta revolução industrial ou Indústria 4.0. Um dos desenvolvimentos mais notáveis neste domínio tem sido a utilização crescente de abordagens baseadas na aprendizagem profunda para automatizar uma série de aplicações mineiras<a href="#ronkin">(Ronkin, et al, 2023)</a>.</p>
 
-							<p>A fragmentação de rochas, processo crucial nas operações de mineração e construção, envolve a quebra de maciços rochosos em fragmentos menores. A distribuição do tamanho desses fragmentos é um fator crítico para a eficiência das operações subsequentes, como carga, transporte e britagem. Tradicionalmente, a análise dessa fragmentação tem sido realizada através de diversos métodos, incluindo peneiração, contagem manual e, nas últimas três décadas, análise de imagens 2D.</p>
+							<p>A fragmentação de rochas, processo crucial nas operações de mineração e construção, envolve a quebra de maciços rochosos em fragmentos menores. A distribuição do tamanho desses fragmentos é um fator crítico para a eficiência das operações subsequentes, como carga, transporte e britagem. Tradicionalmente, a análise dessa fragmentação tem sido realizada através de diversos métodos <a href="#abderrazak">(Abderrazak, Fredj, Boukarm, & Hadji, 2022)</a>, incluindo peneiração, contagem manual e, nas últimas três décadas, análise de imagens 2D. O método de análise por imagens tornou-se predominante, levando ao desenvolvimento de vários softwares comerciais como Wipfrag, Split-Desktop, e Fragalyst 3.0. Estes sistemas utilizam técnicas clássicas de processamento de imagem, como detecção de bordas, transformações morfológicas e segmentação baseada em limiares, para estimar a distribuição do tamanho dos fragmentos <a href="#guo">(Guo, Q., Wang, Y., Yang, S. et al., 2022)</a>.</p>
 
-							<p>O método de análise por imagens 2D tornou-se predominante, levando ao desenvolvimento de vários softwares comerciais como Wipfrag, Split, e Fragalyst 3.0. Estes sistemas utilizam técnicas clássicas de processamento de imagem, como detecção de bordas, transformações morfológicas e segmentação baseada em limiares, para estimar a distribuição do tamanho dos fragmentos.</p>
+							<p>No entanto, a metodologia para captura e análise de imagens ainda apresenta desafios consideráveis, especialmente quando se trata de obter uma representação precisa e consistente da distribuição de tamanhos de fragmentos em pilhas de material. Por exemplo, em <a href="#tosun">(Tosun, 2018)</a> na pedreira de calcário Arkavadi, o muckpile do segundo ensaio de explosão foi dividido em nove seções, e fotografias dessas seções foram tiradas.  A distribuição de tamanhos que representa a totalidade da pilha foi então determinada usando-se o Wipfrag, combinando as distribuições obtidas a partir de cada fotografia.</p>
+
+							<p>Embora esta abordagem permita uma estimativa da distribuição de tamanhos, ela depende de uma série de pressupostos e passos que podem introduzir erros significativos. A combinação de distribuições de tamanhos de diferentes fotografias para representar a pilha inteira assume que cada fotografia é representativa de uma seção proporcional e que as condições de iluminação, ângulo da câmera e resolução são consistentes entre todas as imagens. Essas variáveis podem resultar em discrepâncias na análise e, consequentemente, em uma estimativa menos precisa da fragmentação real.</p>
 
 							<p>
-								No entanto, apesar de sua ampla adoção, essa abordagem apresenta limitações significativas:
+								Ou seja, apesar de sua ampla adoção, essa abordagem apresenta limitações significativas:
 								<ol>
 									<li>Dependência de imagens estáticas, que não capturam a natureza tridimensional dos fragmentos.</li>
 									<li>Dificuldade em lidar com sobreposições e oclusões de fragmentos.</li>
@@ -86,40 +89,21 @@
 								</ol>
 							</p>
 
-							<p>Com o advento da Indústria 4.0 e a crescente digitalização do setor mineiro, surge a oportunidade de superar essas limitações através de técnicas de Deep Learning (DL), particularmente as Redes Neurais Convolucionais (CNNs).</p>
-
 							<p>O problema de investigação central é: Como podemos desenvolver um sistema de análise de fragmentação de rochas que supere as limitações das técnicas atuais, aproveitando o potencial do Deep Learning e da análise de vídeo?</p>
 
 							<p>
-								Especificamente, propomos investigar:
+								Propomos investigar:
 								<ol>
-									<li>A aplicação de CNNs 3D para processar sequências de vídeo, permitindo a incorporação de informações de profundidade e dinâmica temporal.</li>
-									<li>O desenvolvimento de modelos capazes de segmentar e classificar fragmentos de rocha em cenários complexos, com sobreposições e variações de iluminação.</li>
+									<li>A aplicação de CNNs 3D para processamento de vídeo, permitindo a incorporação de informações de profundidade e dinâmica temporal.</li>
+									<li>O desenvolvimento de modelos capazes de segmentar fragmentos de rocha em cenários complexos, com sobreposições e variações de iluminação.</li>
 									<li>A criação de um sistema que possa analisar áreas mais amplas, reduzindo a dependência de generalizações estatísticas.</li>
-									<li>A integração de informações contextuais, como dados geológicos e parâmetros de detonação, para melhorar a precisão da análise.</li>
 								</ol>
 							</p>
 
 							<p>
-								Esta abordagem promete oferecer várias vantagens sobre os métodos atuais:
-								- Representação mais precisa da distribuição tridimensional dos fragmentos.
-								- Maior robustez a variações de iluminação e perspectiva.
-								- Capacidade de capturar a dinâmica temporal do processo de fragmentação.
-								- Redução da volatilidade estatística através de uma análise mais abrangente.
-							</p>
-
-							<p>O sucesso desta investigação tem o potencial de revolucionar a análise de fragmentação de rochas, fornecendo insights mais precisos e detalhados para otimizar as operações de mineração e construção. Além disso, esta pesquisa pode abrir caminhos para aplicações mais amplas de técnicas de DL em outros aspectos da indústria mineral, contribuindo para o avanço da Indústria 4.0 neste setor.</p>
-
-							<!-- <p>A fragmentação de rochas refere-se ao processo de quebra de maciços rochosos sólidos in-situ em pedaços menores durante as operações de escavação ou manuseio de materiais. A distribuição do tamanho dos fragmentos e o grau de fragmentação dentro do maciço rochoso detonado são aspectos críticos para otimizar a eficiência das operações de carga, transporte, britagem e moagem <a href="#nanda_e_naik">(Nanda & Naik, 2023)</a>.</p>
-
-							<p>A análise de fragmentação descreve o conjunto de métodos e técnicas utilizados para medir, estimar e caracterizar os fragmentos de rocha resultantes de uma explosão. Esta análise envolve a quantificação e caracterização da distribuição do tamanho dos fragmentos de rocha. Diversos métodos são utilizados para estimar essa distribuição, incluindo peneiração, contagem de rochas sobredimensionadas, consumo de explosivos na detonação secundária, taxa de carregamento com pá, atrasos de passagem no triturador, análise visual, análise fotográfica manual, métodos fotogramétricos e de fotografia de alta velocidade.</p>
-
-							<p>O método de medição de segmentação de imagens 2D tem sido utilizado por quase 30 anos e é atualmente o método mais usado para medir o tamanho da fragmentação em desmonte. Pesquisadores que estudam e aplicam este método também desenvolveram diversos softwares comerciais, como o Wipfrag e o Gold Size, desenvolvidos no Canadá; Split e Cias, desenvolvidos nos Estados Unidos; Ipacs e Kth, desenvolvidos na Suécia; Fragscan, desenvolvido na França; Tucips, desenvolvido na Alemanha; Power Sieve, desenvolvido na Austrália; e Fragalyst 3.0, desenvolvido na Índia. Dentre esses, o Wipfrag e o Split são os softwares comerciais mais comumente utilizados.<a href="#abderrazak">(Abderrazak, Fredj, Boukarm, & Hadji, 2022)</a></p>
-
-							<p>O setor mineiro tem experimentado uma transformação acelerada nos últimos anos, impulsionada pela digitalização das suas operações, um movimento frequentemente chamado de quarta revolução industrial ou Indústria 4.0. Entre os desenvolvimentos mais notáveis está a crescente utilização de abordagens baseadas na aprendizagem profunda (Deep Learning, DL) para automatizar diversas aplicações na mineração <a href="#ronkin">(Ronkin, et al, 2023)</a>.</p>
-
-							<p>Antes da transição para o deep learning, a análise de fragmentação de rochas baseava-se fortemente em técnicas clássicas de processamento de imagem e visão computacional. Estas abordagens utilizam uma variedade de filtros e operadores para detectar padrões e extrair características relevantes das imagens. Especificamente, técnicas como detecção de bordas (usando operadores como Sobel, Canny ou Laplaciano), transformações morfológicas (como erosão e dilatação), e segmentação baseada em limiares (thresholding) eram amplamente empregadas.</p> -->
-
+								Esta abordagem oferece várias vantagens sobre os métodos atuais, tais como representação mais precisa da distribuição  dos fragmentos.
+								Uma maior robustez à variações de iluminação e perspectiva e a capacidade de capturar a dinâmica tridimensional do processo de fragmentação.
+								O sucesso desta investigação tem o potencial de fazer avanços significativos à análise de fragmentação de rochas, fornecendo insights mais precisos e detalhados para otimizar as operações de mineração.</p>
 
 								
 					
@@ -129,103 +113,74 @@
 
             <subsection class="estado_da_arte">
 				<h3>1.2. Estado da arte (máximo 1000 palavras)</h3>
-					<p>A análise de fragmentação de rochas tem evoluído significativamente nas últimas décadas, impulsionada pela necessidade de métodos mais precisos, rápidos e não invasivos. O estado da arte neste campo abrange uma variedade de técnicas, desde métodos tradicionais até abordagens baseadas em inteligência artificial. </p>
 
+			<p>
+				A estimativa de fragmentação de rochas na indústria de mineração tem experimentado avanços significativos com a aplicação de sistemas de visão computacional (CV) baseados em aprendizado profundo (DL). Este texto apresenta uma visão geral do estado da arte neste campo, destacando as tendências atuais e os desafios enfrentados pelos pesquisadores e profissionais da área. Esta seção será dividida
+				em duas partes.  </p>
 
-					<p><strong>Métodos Tradicionais:</strong></p>
-		
+				<p>Métodos para análise de fragmentação usando machine learning vêm sendo usados desde os anos 1990 <a href="#lange">(Lange,1990)</a>, mas somente com o avanço do aprendizado profundo é que tivemos avanços mais significativos na aplicação de modelos de inteligência artificial ao problema. Ao fazer uma análise  das publicações envolvendo o tema, vemos que à partir de 2018 que publicações envolvendo deep learning têm uma crescente. Que coincide com o ano de publicações sobre Redes Neurais Convolucionais aplicadas a deteção de imagem.</p>
+
+				<p style="text-align: center;"><img src="imagens/Untitled_menor.png" alt=""></p>
+				
+				
+			<p><strong>Abordagens de Visão Computacional</strong></p>
+
+			<p>
+				A fragmentação de rochas envolve a identificação e diferenciação de múltiplos fragmentos rochosos de vários tamanhos a partir de dados visuais. As principais abordagens de CV utilizadas neste campo incluem:
+				<ol>
+					<li>Segmentação Semântica: Foca na classificação pixel a pixel das imagens.</li>
+					<li>Segmentação de Instâncias: Permite a identificação individual de fragmentos de rocha.</li>
+					<li>Detecção de Objetos: Uma abordagem mais recente que está ganhando atenção.</li>
+				</ol>
+			</p>
+
+			<p>Apesar da diversidade de métodos, ainda não há consenso sobre qual abordagem é mais eficaz para a estimativa de fragmentação de rochas.</p>
+
+			<p><strong>Arquiteturas de Aprendizado Profundo</strong></p>
+
+			<p>
+				As arquiteturas de DL mais comumente utilizadas neste campo incluem:
 					<ol>
-						
-						<li>Peneiramento Físico:
-							<ul>
-								<li>Considerado o método padrão para análise granulométrica.</li>
-								<li>Vantagens: Alta precisão para amostras representativas.</li>
-								<li>Desvantagens: Processo lento, trabalhoso e impraticável para grandes volumes.</li>
-							</ul>
-						</li>
-						
-						<li>
-							Análise de Imagem 2D:
-								<ul>
-									<li>Utiliza fotografias de pilhas de material fragmentado.</li>
-									<li>Softwares como Split-Desktop e WipFrag são amplamente utilizados.</li>
-									<li>Vantagens: Não invasivo, rápido e aplicável em larga escala.</li>
-									<li>Desvantagens: Imprecisões devido à natureza 2D da análise, dificuldades com sobreposição e oclusão de fragmentos.</li>
-								</ul>
-						</li>
+						<li>U-Net para segmentação semântica</li>
+						<li>Mask R-CNN para segmentação de instâncias</li>
+						<li>YOLO para detecção de objetos</li>
 					</ol>
 
-				<strong>Avanços Recentes:</strong>
-									
-				
-				<ol>
-					<li>
-						Fotogrametria:
-						<ul>
-							<li>Utiliza múltiplas imagens 2D para reconstrução 3D.</li>
-							<li>Pesquisas: Thurley (2014) aplicou técnicas fotogramétricas para análise de fragmentação em correias transportadoras.</li>
-							<li>Vantagens: Fornece informações 3D a partir de equipamentos 2D acessíveis.</li>
-							<li>Desvantagens: Pode ser computacionalmente intensivo e sensível a condições de iluminação.</li>
-						</ul>
-					</li>
-					<li>
-						Escaneamento a Laser (LIDAR):
-						<ul>
-							<li>Captura dados 3D precisos de superfícies de fragmentos.</li>
-							<li>Pesquisas: Onederra et al. (2015) utilizaram LIDAR para análise de fragmentação em operações de desmonte.</li>
-							<li>Vantagens: Alta precisão, captura direta de dados 3D.</li>
-							<li>Desvantagens: Equipamento caro, desafios em ambientes com poeira.</li>
-						</ul>
-					</li>
-					<li>
-						Processamento de Imagem Avançado:
-						<ul>
-							<li>Técnicas de segmentação e classificação baseadas em algoritmos de visão computacional.</li>
-							<li>Pesquisas: Sanchidrián et al. (2009) desenvolveram algoritmos melhorados para segmentação de fragmentos em imagens 2D.</li>
-							<li>Vantagens: Melhora a precisão da análise 2D tradicional.</li>
-							<li>Desvantagens: Ainda limitado pela natureza bidimensional dos dados.</li>
-						</ul>
-					</li>
-				</ol>
-								
-									
-									
-				<strong>Aplicações de Aprendizado de Máquina:</strong>
-				<ol>
+				<img src="imagens/tipos.png" alt="">	
+				No entanto, observa-se que muitos estudos nesta área estão utilizando arquiteturas que já não representam o estado da arte em CV. Abordagens promissoras para o futuro incluem:
+					Novas versões da família YOLO (v7, v8)
+					Modelos RTMDet
+					Arquiteturas com extratores de características como EfficientNet
+					Blocos baseados em ResNet moderno ou ViT móvel
+			</p>
 
-					<li>
-						Redes Neurais Convolucionais (CNNs) 2D:
-						<ul>
-							<li>Utilizadas para segmentação e classificação automática de fragmentos em imagens.</li>
-							<li>Pesquisas: Banta et al. (2018) aplicaram CNNs para análise de fragmentação em minas de carvão a céu aberto.</li>
-							<li>Vantagens: Capacidade de aprender características complexas, potencial para análise em tempo real.</li>
-							<li>Desvantagens: Limitações inerentes à análise 2D.</li>
-						</ul>
-					</li>
+			<p>
+				Otimização de Desempenho
+				A maioria dos estudos neste campo emprega arquiteturas de computação paralela para treinamento e inferência, tipicamente utilizando estações de trabalho com processadores gráficos. No entanto, há uma lacuna na otimização de desempenho. Técnicas modernas de otimização incluem:
+					Aritmética de Precisão Mista: Combina precisão de ponto flutuante de 16 e 32 bits.
+					Computações com Matrizes Esparsas: Reduz requisitos de memória e aumenta a velocidade de computação.
+					Destilação de Conhecimento: Cria modelos DL leves a partir de modelos pré-treinados maiores.
+			</p>
 
-					<li>
-						Aprendizado Profundo em Nuvens de Pontos:
-						<ul>
-							<li>Aplicação de redes neurais em dados 3D representados como nuvens de pontos.</li>
-							<li>Pesquisas: Ao et al. (2019) exploraram o uso de PointNet para classificação de fragmentos de rocha.</li>
-							<li>Vantagens: Capacidade de processar diretamente dados 3D.</li>
-							<li>Desvantagens: Desafios na representação eficiente de superfícies complexas.</li>
-						</ul>
-					</li>
-					<li>
-						CNNs 3D:
-						<ul>
-							<li>Extensão das CNNs para processamento de dados volumétricos.</li>
-							<li>Pesquisas: Ainda limitadas no contexto específico de fragmentação de rochas, mas com aplicações promissoras em campos relacionados como geologia e engenharia de petróleo.</li>
-							<li>Vantagens: Potencial para análise volumétrica completa, captura de informações de forma e tamanho em 3D.</li>
-							<li>Desvantagens: Computacionalmente intensivo, requer conjuntos de dados 3D substanciais para treinamento.</li>
-						</ul>
-					</li>
-				
-			</ol>
-				
-				
-					<p>O estado da arte na análise de fragmentação de rochas está em rápida evolução, com um movimento claro em direção a métodos mais sofisticados baseados em aprendizado profundo e processamento 3D. As CNNs 3D representam uma fronteira promissora neste campo, oferecendo o potencial de superar muitas das limitações dos métodos atuais. No entanto, sua aplicação efetiva ainda enfrenta desafios significativos, principalmente em termos de aquisição de dados, poder computacional e integração com sistemas existentes. A pesquisa proposta visa abordar esses desafios, contribuindo para o avanço do estado da arte neste domínio crítico para a indústria de mineração.</p></p>
+			<p>
+				Estratégias de Paralelização
+				Para sistemas paralelos massivos, várias estratégias de paralelização podem ser identificadas:
+					Paralelismo de Dados: Distribui grandes conjuntos de dados entre múltiplos dispositivos.
+					Paralelismo de Modelo: Divide o modelo entre diferentes dispositivos.
+					Pipelining: Organiza o modelo em estágios sequenciais.
+					Hibridização: Combina múltiplas estratégias de paralelização.
+			</p>
+
+					<p>
+						Desafios e Oportunidades
+							Atraso Tecnológico: Muitos estudos em fragmentação de rochas estão atrasados em relação aos avanços gerais em CV nos últimos 2-3 anos.
+							Otimização de Modelos: Há uma necessidade de melhorar a precisão dos modelos através de técnicas como meta-aprendizado e outras formas de regularização.
+							Computação de Alto Desempenho: A implementação de técnicas avançadas de otimização e paralelização pode permitir treinamento mais eficiente em sistemas de alto desempenho e inferência em dispositivos de baixo desempenho em instalações industriais.
+							Escolha de Arquitetura: A seleção da arquitetura ideal, considerando prós e contras de diferentes abordagens, requer pesquisas adicionais.
+					</p>
+
+					<p>Conclusão: O estado da arte na análise de fragmentação de rochas está em rápida evolução, com um movimento claro em direção a métodos mais sofisticados baseados em aprendizado profundo e processamento 3D. As CNNs 3D representam uma fronteira promissora neste campo, oferecendo o potencial de superar muitas das limitações dos métodos atuais. No entanto, sua aplicação efetiva ainda enfrenta desafios significativos, principalmente em termos de aquisição de dados, poder computacional e integração com sistemas existentes. A pesquisa proposta visa abordar esses desafios, contribuindo para o avanço do estado da arte neste domínio crítico para a indústria de mineração.</p>
+
 			</subsection>
 
             <section class="objetivos">
@@ -305,76 +260,84 @@
 
         <section class="calendarizacao">
             <h3>2.4 Calendarização</h3>
-            <p>Um gráfico Gantt será anexado detalhando as tarefas e os prazos de execução.</p>
+            <p>Anexar Gráfico</p>
         </section>
 
     
 		<section class="bibliografia">
 			<h2 id="referencias">Referências</h2>
 			<ol>
-		
+
 				<li><a href="artigos/fragmentacao/A Blind Comparison Between Results of Four Image Analysis Systems Using a Photo-Library of Piles of Sieved Fragments.pdf">Latham, John-Paul & Kemeny, John & Norbert, Maerz & Noy, Michael & Schleifer, Jacques & Tose, Simon. (2010). A Blind Comparison Between Results of Four Image Analysis Systems Using a Photo-Library of Piles of Sieved Fragments. Fragblast. June 2003. 105-132. 10.1076/frag.7.2.105.15899. </a></li>
 				
 				<li><a href="artigos/fragmentacao/A Comparative Analysis of Rock Fragmentation using Blast Prediction Results.pdf">Agyei, G. & Owusu-Tweneboah, M.. (2019). A Comparative Analysis of Rock Fragmentation using Blast Prediction Results. Ghana Mining Journal. 19. 49-58. 10.4314/gm.v19i1.6. </a></li>
-		
+
 				<li><a href="artigos/fragmentacao/A method of blasted rock image segmentation based on improved watershed algorithm.pdf">Guo, Q., Wang, Y., Yang, S. et al. A method of blasted rock image segmentation based on improved watershed algorithm. Sci Rep 12, 7143 (2022). https://doi.org/10.1038/s41598-022-11351-0</a></li>
-		
+
 				<li><a href="artigos/fragmentacao/A modified Wipfrag program for determining muckpile fragmentation.pdf">Tosun, A.. (2018). A modified Wipfrag program for determining muckpile fragmentation. Journal of the Southern African Institute of Mining and Metallurgy, 118(10), 1113-1199. https://dx.doi.org/10.17159/2411-9717/2018/v118n10a13</a></li>
-		
+
 				<li><a href="artigos/fragmentacao/A practical method of bench blasting design for desired fragmentation based on digital image processing technique and Kuz-Ram model.pdf">Engin, Irfan. (2009). A practical method of bench blasting design for desired fragmentation based on digital image processing technique and Kuz-Ram model. </a></li>
-		
+
 				<li id="nanda_e_naik"><a href="artigos/fragmentacao/A Review of the Blast Fragmentation Analysis Techniques used in Surface Mines.pdf">Nanda, Suryajyoti & Naik, Hrushikesh. (2023). A Review of the Blast Fragmentation Analysis Techniques used in Surface Mines. Journal of Mines Metals and Fuels. 71. 2445-2454. 10.18311/jmmf/2023/28601.</a></li>
-		
+
 				<li id="kinyua"><a href="artigos/A review of the influence of blast fragmentation on downstream processing of metal ores.pdf">Eric Munene Kinyua, Zhang Jianhua, Richard M. Kasomo, Dalmus Mauti, Jackson Mwangangi, A review of the influence of blast fragmentation on downstream processing of metal ores, Minerals Engineering, Volume 186, 2022, 107743, ISSN 0892-6875, https://doi.org/10.1016/j.mineng.2022.107743.</a></li>
 				
 				<li><a href="artigos/fragmentacao/Analysis of Blast Fragmentation Using WipFrag.pdf">Nanda, Suryajyoti & Pal, Bhatu. (2020). Analysis of Blast Fragmentation Using WipFrag. International Journal of Innovative Science and Research Technology. 5. 1561-1566. 10.38124/IJISRT20JUN1086. </a></li>
-		
+
 				<li><a href="artigos/fragmentacao/Analysis of blasted rocks fragmentation using digital image processing (case study -  limestone quarry of Abyek Cement Company).pdf">Elahi, Alireza & Hosseini, Mehdi. (2017). Analysis of blasted rocks fragmentation using digital image processing (case study: limestone quarry of Abyek Cement Company). International Journal of Geo-Engineering. 8. 16. 10.1186/s40703-017-0053-z. </a></li>
-		
+
 				<li><a href="artigos/fragmentacao/Application of stochastic approach to blast fragmentation modelling.pdf">
 					Onederra, I., Mardones, F., & Scherpenisse, C. (2010). Application of stochastic approach to blast fragmentation modelling. Mining Technology, 119(4), 221–232. https://doi.org/10.1179/1743286310Y.0000000003</a></li>
-		
+
+				<li><a href="artigos/fragmentacao/Blast fragmentation analysis using image processing.pdf">Ujjwal Kumar and Ayesha Shaik 2020 J. Phys.: Conf. Ser. 1716 012055 DOI 10.1088/1742-6596/1716/1/012055</a></li>
+
+				<li><a href="artigos/fragmentacao/Blast Fragmentation Analysis using Image Processing2.pdf">S.K, Ayesha. (2020). Blast Fragmentation Analysis using Image Processing. Journal of Physics: Conference Series. 1716. 012055. 10.1088/1742-6596/1716/1/012055. </a></li>
+
+				<li><a href="artigos/fragmentacao/Blasting Fragmentation Study Using 3D Image Analysis of a Hard Rock Mine.pdf">Figueiredo J, Torres V, Cruz R, Moreira D. Blasting Fragmentation Study Using 3D Image Analysis of a Hard Rock Mine. Applied Sciences. 2023; 13(12):7090. https://doi.org/10.3390/app13127090 </a></li>
+
 				<li><a href="artigos/fragmentacao/Comparison of Fragmentation Measurements by Photographic and Image Analysis Techniques.pdf">Sudhakar, J. & Adhikari, Govind & Gupta, R.. (2006). Comparison of Fragmentation Measurements by Photographic and Image Analysis Techniques. Rock Mechanics and Rock Engineering. 39. 159-168. 10.1007/s00603-005-0044-9. </a></li>
-		
-				<li><a href="artigos/fragmentacao/Enhancing Rock Fragmentation Assessment in Mining Blasting through Machine Learning Algorithms - An Effective Approach.pdf">Gebretsadik Abraha, Angesom & Kumar, Rahul & Ikeda, Hajime & Ali, Mujahid & Fissha, Yewuhalashet & Mishra, Arvind & Kide Hailemariam, Yemane & Mnzool, Mohammed & Ali, Enas & Gomaa, Ehab. (2023). Enhancing Rock Fragmentation Assessment in Mining Blasting through Machine Learning Algorithms: An Effective Approach. 10.20944/preprints202306.0891.v1.</a> </li>
+
+				<!-- <li><a href="artigos/fragmentacao/Enhancing Rock Fragmentation Assessment in Mining Blasting through Machine Learning Algorithms - An Effective Approach.pdf">Gebretsadik Abraha, Angesom & Kumar, Rahul & Ikeda, Hajime & Ali, Mujahid & Fissha, Yewuhalashet & Mishra, Arvind & Kide Hailemariam, Yemane & Mnzool, Mohammed & Ali, Enas & Gomaa, Ehab. (2023). Enhancing Rock Fragmentation Assessment in Mining Blasting through Machine Learning Algorithms: An Effective Approach. 10.20944/preprints202306.0891.v1.</a> </li>
 				
-				<li><a href="artigos/fragmentacao/Enhancing rock fragmentation assessment in mine blasting through machine learning algorithms - a practical approach.pdf">Gebretsadik, A., Kumar, R., Fissha, Y. et al. Enhancing rock fragmentation assessment in mine blasting through machine learning algorithms: a practical approach. Discov Appl Sci 6, 223 (2024). https://doi.org/10.1007/s42452-024-05888-0</a></li>
-		
-				<li id="abderrazak"><a href="artigos/fragmentacao/Fragmentation analysis using digital image processing and empirical model (KuzRam) - a comparative study.pdf">Abderrazak, Saadoun & Fredj, Mohamed & Riadh, Boukarm & Hadji, Riheb. (2022). Fragmentation analysis using digital image processing and empirical model (KuzRam): a comparative study. Journal of Mining Institute. Online first. 822-832. 10.31897/PMI.2022.84. </a></li>
-		
-				<li><a href="artigos/fragmentacao/Machine vision methods for estimation of size distribution of aggregate transported on conveyor belts.pdf">Kontny, Michał. (2017). Machine vision methods for estimation of size distribution of aggregate transported on conveyor belts. Vibroengineering PROCEDIA. 13. 10.21595/vp.2017.19151. </a></li>
+				<li><a href="artigos/fragmentacao/Enhancing rock fragmentation assessment in mine blasting through machine learning algorithms - a practical approach.pdf">Gebretsadik, A., Kumar, R., Fissha, Y. et al. Enhancing rock fragmentation assessment in mine blasting through machine learning algorithms: a practical approach. Discov Appl Sci 6, 223 (2024). https://doi.org/10.1007/s42452-024-05888-0</a></li> -->
+
+				<li><a href="artigos/fragmentacao/Fragmentation analysis using digital image processing and empirical model (KuzRam) - a comparative study.pdf">Abderrazak, Saadoun & Fredj, Mohamed & Riadh, Boukarm & Hadji, Riheb. (2022). Fragmentation analysis using digital image processing and empirical model (KuzRam): a comparative study. Journal of Mining Institute. Online first. 822-832. 10.31897/PMI.2022.84. </a></li>
 
 				<li><a href="artigos/fragmentacao/Measurement of Size Distribution of Blasted Rock Using Digital Image Processing.pdf">Irfan, Fahad & S, Shah & M, Behan. (2009). Measurement of Size Distribution of Blasted Rock Using Digital Image Processing. Journal of King Abdulaziz University : Engineering Sciences. 20. 10.4197/Eng.20-2.4. </a></li>
-		
+
 				<li><a href="artigos/fragmentacao/Measurement of the Size Distribution of Rocks on a Conveyor Beit Using Machine Vision.pdf">Lange, T. B. (1990). Measurement of the size distribution of rocks on a conveyor belt using machine vision [Tese de doutorado, University of the Witwatersrand]. https://hdl.handle.net/10539/28937</a></li>
 				
 				<li><a href="artigos/fragmentacao/Mine-to-crusher policy - Planning of mine blasting patterns for environmentally friendly and optimum fragmentation using Monte Carlo.pdf">Hosseini, Shahab & Mousavi, Amin & Monjezi, Masoud & Khandelwal, Manoj, 2022. "Mine-to-crusher policy: Planning of mine blasting patterns for environmentally friendly and optimum fragmentation using Monte Carlo simulation-based multi-objective grey wolf optimization approach," Resources Policy, Elsevier, vol. 79(C). </a></li>
 				
 				<li><a href="artigos/fragmentacao/On the accuracy of fragment size measurement by image analysis in combination with some distribution functions.pdf">Sanchidrián, J., Segarra, P., Ouchterlony, F. et al. On the accuracy of fragment size measurement by image analysis in combination with some distribution functions. Rock Mech Rock Eng 42, 95–116 (2009). https://doi.org/10.1007/s00603-007-0161-8</a></li>
-		
+
 				<li><a href="artigos/fragmentacao/Performance of some distributions to describe rock fragmentation data.pdf">José A. Sanchidrián, Finn Ouchterlony, Peter Moser, Pablo Segarra, Lina M. López, Performance of some distributions to describe rock fragmentation data,  International Journal of Rock Mechanics and Mining Sciences, Volume 53, 2012, Pages 18-31, ISSN 1365-1609, https://doi.org/10.1016/j.ijrmms.2012.04.001.</a></li>
-		
+
 				<li><a href="artigos/fragmentacao/Post-Muckpile, Pre-Primary Crusher, Automated Optical Blast Fragmentation Sizing.pdf">Norbert, Maerz & Palangio, Tom. (2010). Post-Muckpile, Pre-Primary Crusher, Automated Optical Blast Fragmentation Sizing. Fragblast. June. 119-136. 10.1080/13855140412331336142. </a></li>
 				
-		
+
 				<li><a href="artigos/fragmentacao/Prediction_of_rock_fragmentation_using_the_Kuznets.pdf">Mutinda, Emmanuel & Alunda, Bernard & Kasomo, Richard & Maina, Duncan. (2021). Prediction of rock fragmentation using the Kuznetsov-Cunningham-Ouchterlony model. Journal of the Southern African Institute of Mining and Metallurgy. 121. 107-112. 10.17159/2411-9717/1401/2021. </a></li>
-		
+
+				<li><a href="artigos/fragmentacao/Real-Time YOLO-family Comparison For Blast Quality Estimation in the Open Pit Conditions.pdf">Ronkin, M., & Reshetnikov, K. (2023). Real-Time YOLO-family Comparison for Blast Quality Estimation in the Open Pit Conditions. In Proceedings - 2023 IEEE Ural-Siberian Conference on Biomedical Engineering, Radioelectronics and Information Technology, USBEREIT 2023 (Conference paper, pp. 254-257). https://doi.org/10.1109/USBEREIT58508.2023.10158813</a></li>
+
 				<li><a href="artigos/fragmentacao/Research on the method of determining the block size for an open‑pit mine integrating mining parameters and shovel‑truck’s operation efficiency.pdf">Guo, Weiqiang & Liu, Guangwei & Li, Jiaming & Chai, Senlin & Guo, Shupeng. (2024). Research on the method of determining the block size for an open-pit mine integrating mining parameters and shovel-truck’s operation efficiency. Scientific Reports. 14. 10.1038/s41598-024-52815-9.</a></li>
-		
+
 				<li id="ronkin"><a href="artigos/fragmentacao/Review of deep learning approaches in solving rock fragmentation problems.pdf">Ronkin, Mikhail & Akimova, Elena & Misilov, Vladimir. (2023). Review of deep learning approaches in solving rock fragmentation problems. AIMS Mathematics. 8. 23900-23940. 10.3934/math.20231219. </a></li>
 			
 				<li><a href="artigos/fragmentacao/Rock Fragmentation by Blasting – a review.pdf">Roy, M.P. & Paswan, Ranjit & Sarim, Md & Kumar, Suraj & Jha, Rakesh & Singh, P.K.. (2016). Rock Fragmentation by Blasting – a review. Journal of Mine Metal and Fuels. 64. 424-431. </a></li>
 				
 				<li><a href="artigos/fragmentacao/Rock Fragmentation Evaluation towards Blast-To-Mill Concept of Blast Optimization in Hard Rock Mines.pdf">Afum, Bright. (2021). Rock Fragmentation Evaluation towards Blast-To-Mill Concept of Blast Optimization in Hard Rock Mines. Journal of Mineral and Material Science (JMMS). 2. 1-9. 10.54026/JMMS/1030. </a></li>
-		
+
 				<li><a href="artigos/fragmentacao/Rock Particle Motion Information Detection Based on Video Instance Segmentation.pdf">Chen, Man, Maojun Li, Yiwei Li, and Wukun Yi. 2021. "Rock Particle Motion Information Detection Based on Video Instance Segmentation" Sensors 21, no. 12: 4108. https://doi.org/10.3390/s21124108</a></li>
-		
+
 				<li><a href="artigos/fragmentacao/Size distribution functions for rock fragments.pdf">José A. Sanchidrián, Finn Ouchterlony, Pablo Segarra, Peter Moser, Size distribution functions for rock fragments, International Journal of Rock Mechanics and Mining Sciences, Volume 71, 2014, Pages 381-394</a></li>
-		
+
 				<li><a href="artigos/fragmentacao/Size measurement of blasted rock fragments based on FRRSnet+.pdf">Guo, Qinpeng & Yang, Shijiao & Wang, Yuchen & Zhang, Huanbao. (2023). Size measurement of blasted rock fragments based on FRRSnet+. Measurement. 218. 113207. 10.1016/j.measurement.2023.113207. </a></li>
 				
+				<li id="ronneberger"><a href="artigos/convolucao/U-Net - Convolutional Networks for Biomedical Image Segmentation.pdf">Ronneberger, O., Fischer, P., Brox, T. (2015). U-Net: Convolutional Networks for Biomedical Image Segmentation. In: Navab, N., Hornegger, J., Wells, W., Frangi, A. (eds) Medical Image Computing and Computer-Assisted Intervention – MICCAI 2015. MICCAI 2015. Lecture Notes in Computer Science(), vol 9351. Springer, Cham. https://doi.org/10.1007/978-3-319-24574-4_28</a></li>
+
 				<li><a href="artigos/fragmentacao/Video Instance Segmentation of Rock Particle Based on MaskTrack R-CNN.pdf">Chen, M., Li, M., Li, Y. (2022). Video Instance Segmentation of Rock Particle Based on MaskTrack R-CNN. In: Yao, J., Xiao, Y., You, P., Sun, G. (eds) The International Conference on Image, Vision and Intelligent Systems (ICIVIS 2021). Lecture Notes in Electrical Engineering, vol 813. Springer, Singapore. https://doi.org/10.1007/978-981-16-6963-7_63</a></li>
-		
+	
 			</ol>
 		</section>
 
