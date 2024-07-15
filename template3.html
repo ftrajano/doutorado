@@ -114,23 +114,29 @@
             <subsection class="estado_da_arte">
 				<h3>1.2. Estado da arte (máximo 1000 palavras)</h3>
 
-			<p>
-				A estimativa de fragmentação de rochas na indústria de mineração tem experimentado avanços significativos com a aplicação de sistemas de visão computacional (CV) baseados em aprendizado profundo (DL). Este texto apresenta uma visão geral do estado da arte neste campo, destacando as tendências atuais e os desafios enfrentados pelos pesquisadores e profissionais da área. Esta seção será dividida
-				em duas partes.  </p>
+				<p>Entre os métodos de análise de fragmentação utilizados na indústria de mineração, destacam-se a técnica de peneiramento, que classifica fragmentos de rocha por diferentes tamanhos de malha, o método de contagem de blocos superdimensionados, onde os blocos maiores são contados manualmente, e o método da taxa de carregamento da pá, que avalia a fragmentação com base na velocidade de remoção do material. Além disso, a análise visual permite uma inspeção imediata da pilha pós-explosão, embora seja subjetiva e menos confiável. A fotogrametria, que utiliza medições tridimensionais com a ajuda de fotografias, e a técnica de análise de imagem, que proporciona uma distribuição precisa dos tamanhos sem interferir na produção, também são amplamente empregadas devido à sua precisão e eficiência.<a href="#nanda_e_naik">(Nanda & Naik, 2023)</a></p>
 
-				<p>Métodos para análise de fragmentação usando machine learning vêm sendo usados desde os anos 1990 <a href="#lange">(Lange,1990)</a>, mas somente com o avanço do aprendizado profundo é que tivemos avanços mais significativos na aplicação de modelos de inteligência artificial ao problema. Ao fazer uma análise  das publicações envolvendo o tema, vemos que à partir de 2018 que publicações envolvendo deep learning têm uma crescente. Que coincide com o ano de publicações sobre Redes Neurais Convolucionais aplicadas a deteção de imagem.</p>
+
+				<p>A estimativa de fragmentação de rochas na indústria de mineração tem experimentado avanços significativos com a aplicação de sistemas de visão computacional (CV) baseados em aprendizado profundo (DL). Este texto apresenta uma visão geral do estado da arte neste campo, destacando as tendências atuais e os desafios enfrentados pelos pesquisadores e profissionais da área. Esta seção será dividida
+					em duas partes. A primeira parte vamos falar sobre as tecnologias que estão sendo usadas para a análise de fragmentação de rochas, a segunda parte vai falar sobre o modelo de Redes Neurais Convolucionais 3D</p>
+
+				<p>Métodos para análise de fragmentação usando machine learning vêm sendo usados desde os anos 1990 <a href="#lange">(Lange,1990)</a>, mas somente com o avanço do aprendizado profundo, em particular das redes neurais convolucionais (cnn's da sigla em inglês), apresentadas em <a href="#ronneberger">(Ronneberger, 2015)</a> é que obtivemos resultados mais significativos na aplicação da inteligência artificial ao problema.<a href="#vu">(Vu et al. 2021)</a> e um vemos um crescente interesse nesse campo de pesquisa, como podemos ver na figura abaixo.</p>
+
+				
 
 				<p style="text-align: center;"><img src="imagens/Untitled_menor.png" alt=""></p>
 				
 				
 			<p><strong>Abordagens de Visão Computacional</strong></p>
 
+			<p>Quando falamos de Redes Neurais Convolucionais, estamos falando de uma família de modelos de aprendizado profundo que possuem uma arquitetura em comum. (Falar sobre a arquitetura ou é muito específico pra esse texto????)</p>
+
 			<p>
 				A fragmentação de rochas envolve a identificação e diferenciação de múltiplos fragmentos rochosos de vários tamanhos a partir de dados visuais. As principais abordagens de CV utilizadas neste campo incluem:
 				<ol>
 					<li>Segmentação Semântica: Foca na classificação pixel a pixel das imagens.</li>
 					<li>Segmentação de Instâncias: Permite a identificação individual de fragmentos de rocha.</li>
-					<li>Detecção de Objetos: Uma abordagem mais recente que está ganhando atenção.</li>
+					<li>Detecção de Objetos: .</li>
 				</ol>
 			</p>
 
@@ -154,7 +160,7 @@
 					Blocos baseados em ResNet moderno ou ViT móvel
 			</p>
 
-			<p>
+			<!-- <p>
 				Otimização de Desempenho
 				A maioria dos estudos neste campo emprega arquiteturas de computação paralela para treinamento e inferência, tipicamente utilizando estações de trabalho com processadores gráficos. No entanto, há uma lacuna na otimização de desempenho. Técnicas modernas de otimização incluem:
 					Aritmética de Precisão Mista: Combina precisão de ponto flutuante de 16 e 32 bits.
@@ -169,17 +175,17 @@
 					Paralelismo de Modelo: Divide o modelo entre diferentes dispositivos.
 					Pipelining: Organiza o modelo em estágios sequenciais.
 					Hibridização: Combina múltiplas estratégias de paralelização.
+			</p> -->
+
+			<p>
+				Desafios e Oportunidades
+					Atraso Tecnológico: Muitos estudos em fragmentação de rochas estão atrasados em relação aos avanços gerais em CV nos últimos 2-3 anos.
+					Otimização de Modelos: Há uma necessidade de melhorar a precisão dos modelos através de técnicas como meta-aprendizado e outras formas de regularização.
+					Computação de Alto Desempenho: A implementação de técnicas avançadas de otimização e paralelização pode permitir treinamento mais eficiente em sistemas de alto desempenho e inferência em dispositivos de baixo desempenho em instalações industriais.
+					Escolha de Arquitetura: A seleção da arquitetura ideal, considerando prós e contras de diferentes abordagens, requer pesquisas adicionais.
 			</p>
 
-					<p>
-						Desafios e Oportunidades
-							Atraso Tecnológico: Muitos estudos em fragmentação de rochas estão atrasados em relação aos avanços gerais em CV nos últimos 2-3 anos.
-							Otimização de Modelos: Há uma necessidade de melhorar a precisão dos modelos através de técnicas como meta-aprendizado e outras formas de regularização.
-							Computação de Alto Desempenho: A implementação de técnicas avançadas de otimização e paralelização pode permitir treinamento mais eficiente em sistemas de alto desempenho e inferência em dispositivos de baixo desempenho em instalações industriais.
-							Escolha de Arquitetura: A seleção da arquitetura ideal, considerando prós e contras de diferentes abordagens, requer pesquisas adicionais.
-					</p>
-
-					<p>Conclusão: O estado da arte na análise de fragmentação de rochas está em rápida evolução, com um movimento claro em direção a métodos mais sofisticados baseados em aprendizado profundo e processamento 3D. As CNNs 3D representam uma fronteira promissora neste campo, oferecendo o potencial de superar muitas das limitações dos métodos atuais. No entanto, sua aplicação efetiva ainda enfrenta desafios significativos, principalmente em termos de aquisição de dados, poder computacional e integração com sistemas existentes. A pesquisa proposta visa abordar esses desafios, contribuindo para o avanço do estado da arte neste domínio crítico para a indústria de mineração.</p>
+			<p>Conclusão: O estado da arte na análise de fragmentação de rochas está em rápida evolução, com um movimento claro em direção a métodos mais sofisticados baseados em aprendizado profundo e processamento 3D. As CNNs 3D representam uma fronteira promissora neste campo, oferecendo o potencial de superar muitas das limitações dos métodos atuais. No entanto, sua aplicação efetiva ainda enfrenta desafios significativos, principalmente em termos de aquisição de dados, poder computacional e integração com sistemas existentes. A pesquisa proposta visa abordar esses desafios, contribuindo para o avanço do estado da arte neste domínio crítico para a indústria de mineração.</p>
 
 			</subsection>
 
@@ -307,6 +313,8 @@
 
 				<li><a href="artigos/fragmentacao/Measurement of the Size Distribution of Rocks on a Conveyor Beit Using Machine Vision.pdf">Lange, T. B. (1990). Measurement of the size distribution of rocks on a conveyor belt using machine vision [Tese de doutorado, University of the Witwatersrand]. https://hdl.handle.net/10539/28937</a></li>
 				
+				<li id="vu"><a href="artigos/fragmentacao/Measuring blast fragmentation at Nui Phao open pit mine Vietnam using the Mask R CNN deep learning model.pdf">Vu, Trong & Dinh Bao, Tran & Drebenstedt, Carsten & Hoa, Pham & Viet, Hoang & Thang, Hoang. (2021). Measuring blast fragmentation at Nui Phao open- pit mine, Vietnam using the Mask R-CNN deep learning model. Mining Technology: Transactions of the Institutions of Mining and Metallurgy. 10.1080/25726668.2021.1944458. </a></li>
+
 				<li><a href="artigos/fragmentacao/Mine-to-crusher policy - Planning of mine blasting patterns for environmentally friendly and optimum fragmentation using Monte Carlo.pdf">Hosseini, Shahab & Mousavi, Amin & Monjezi, Masoud & Khandelwal, Manoj, 2022. "Mine-to-crusher policy: Planning of mine blasting patterns for environmentally friendly and optimum fragmentation using Monte Carlo simulation-based multi-objective grey wolf optimization approach," Resources Policy, Elsevier, vol. 79(C). </a></li>
 				
 				<li><a href="artigos/fragmentacao/On the accuracy of fragment size measurement by image analysis in combination with some distribution functions.pdf">Sanchidrián, J., Segarra, P., Ouchterlony, F. et al. On the accuracy of fragment size measurement by image analysis in combination with some distribution functions. Rock Mech Rock Eng 42, 95–116 (2009). https://doi.org/10.1007/s00603-007-0161-8</a></li>
